@@ -1,7 +1,7 @@
 #!/bin/bash
   
-person1=ramesh #no spaces before and after equal
-person2=suresh
+person1=sairam #no spaces before and after equal
+person2=vivek
 
  echo "$person1 ::hi $person2"
  echo "$person2::  hello $person1"
