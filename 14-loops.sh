@@ -1,5 +1,5 @@
 #!/bin/bash
-for i in {o..5}
+for i in {0..5}
 do
    echo $i
 done
