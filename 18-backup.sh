@@ -38,4 +38,15 @@ then
     
 fi
 
+if [ ! -d $SOURCE_DIRECTORY ]
+then
+    echo -e "$SOURCE_DIRECTORY Does not exist ......Please Check"
+    exit 1
+fi
+ if [ ! -d $DESTINATION_DIRECTORY ]
+ then
+    echo "$DESTINATION_DIRECTORY Does not exist .... Please Check"
+    exit 1
+fi
+
 echo "Script started executing at: $TIMESTAMP" &>>$LOG_FILE_NAME
