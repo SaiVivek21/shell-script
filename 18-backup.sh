@@ -7,7 +7,7 @@ N="\e[0m"
   
 SOURCE_DIRECTORY=$1
 DESTINATION_DIRECTORY=$2
-DAYS=$(3:-14)
+DAYS=${3:-14}
 LOGS_FOLDER="/var/log/shell-script-logs"
 LOG_FILE=$(echo $0 | cut -d "." -f1 )
 TIMESTAMP=$(date +%Y-%m-%d-%H-%M-%S)
@@ -26,6 +26,9 @@ VALIDATE(){
 USAGE(){
     echo -e "$R USAGE:: $N sh 18-backup.sh <SOURCE_DIR> <DESTINATION_DIR> <DAYS(OPTIONAL)>"
 }
+
+mkdir -p /home/ec2-user/shellscript-logs/
+
 if [ $# -lt 2 ]
 then
     USAGE
